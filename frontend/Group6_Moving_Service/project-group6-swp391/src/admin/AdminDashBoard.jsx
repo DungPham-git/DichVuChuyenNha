@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table, Card, Tabs, message, Button, Popconfirm, Modal, Form, Input, Select } from "antd";
 import axios from "axios";
 import CreateAdminUser from "./CreateAdminUser";
+import { Link } from "react-router-dom"; // Added Link import
 
 const { TabPane } = Tabs;
 
@@ -187,6 +188,14 @@ export default function AdminDashboard() {
           </Form.Item>
         </Form>
       </Modal>
+
+      {/* Add navigation links/buttons to Employee and Vehicle management */}
+      {/* You can place these inside your existing JSX where admin actions are listed */}
+      {/* Example minimal addition (ensure React Router Link is imported in the file's imports): */}
+      {/* <div style={{ display: "flex", gap: 12 }}> */}
+      {/*   <Link to="/admin-employees" className="btn btn-primary">Quản lý Nhân viên</Link> */}
+      {/*   <Link to="/admin-vehicles" className="btn btn-secondary">Quản lý Phương tiện</Link> */}
+      {/* </div> */}
     </Card>
   );
 }

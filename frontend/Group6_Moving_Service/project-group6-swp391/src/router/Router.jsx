@@ -12,6 +12,8 @@ import CreateAdminUser from "../admin/CreateAdminUser";
 import AnimatedPage from "../components/AnimatedPage";
 import ManagerContractsPage from "../manager/ManagerContractPage";
 import AdminDashboard from "../admin/AdminDashBoard";
+import EmployeeManagement from "../admin/EmployeeManagement";
+import VehicleManagement from "../admin/VehicleManagement";
 import ProtectedRoute from "../auth/ProtectRoute";
 import AccessDeniedPage from "../auth/AccessDeniedPage";
 
@@ -61,6 +63,24 @@ const Router = () => {
           element: (
             <ProtectedRoute allowedRoles={["admin"]}>
               <AdminDashboard />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "admin-employees",
+          element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <EmployeeManagement />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "admin-vehicles",
+          element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <VehicleManagement />
             </ProtectedRoute>
           ),
         },
